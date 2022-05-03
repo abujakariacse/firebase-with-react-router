@@ -3,7 +3,7 @@ import useFirebase from '../../hooks/useFirebase';
 import './Login.css';
 
 const Login = () => {
-    const { signInWithGoogle } = useFirebase();
+    const { handleSignInWithGoogle } = useFirebase();
     const handleOnSubmit = (e) => {
         e.preventDefault();
     }
@@ -11,7 +11,7 @@ const Login = () => {
         <div>
             <h3>This is Login</h3>
             <div style={{ margin: '20px' }}>
-                <button onClick={signInWithGoogle}>Google Sign In</button>
+                <button onClick={handleSignInWithGoogle}>Google Sign In</button>
             </div>
             <form onSubmit={handleOnSubmit}>
                 <input type="email" placeholder='Your Email' /><br />
